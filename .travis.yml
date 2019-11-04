@@ -14,6 +14,8 @@ jobs:
 
 
 install:
+   - sudo update-ca-certificates --fresh
+   - export SSL_CERT_DIR=/etc/ssl/certs
    - pip install git+https://github.com/agronholm/anyio.git
    - pip install overly curio
    - pip install "pytest >= 3.7.2"
